@@ -1,5 +1,5 @@
 <p align="left">
-    <a href="README.md">English</a>&nbsp ｜ &nbsp中文</a>
+    <a href="README_CN.md">中文</a>&nbsp ｜ &nbspEnglish</a>
 </p>
 
 # ollama-gradio-webui
