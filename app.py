@@ -22,9 +22,9 @@ def ollama_chat(message, history,model_name):
 
 with gr.Blocks(title="Ollama Chat", fill_height=True) as demo:
     gr.Markdown("""# Ollama Webui""")
-    model_list = gr.Dropdown(model_names, value="", allow_custom_value=True, label="模型", info="选择聊天模型")
+    model_info = gr.Dropdown(model_names, value="", allow_custom_value=True, label="模型", info="选择聊天模型")
     text_box = gr.Textbox(scale=4,render=False)
-    gr.ChatInterface(fn=ollama_chat,textbox=text_box,additional_inputs=model_list,submit_btn="提交",retry_btn="🔄 重试",undo_btn="↩️ 撤消",clear_btn="🗑️ 清除")
+    gr.ChatInterface(fn=ollama_chat,textbox=text_box,additional_inputs=model_info,submit_btn="提交",retry_btn="🔄 重试",undo_btn="↩️ 撤消",clear_btn="🗑️ 清除")
 
 if __name__ == "__main__":
     demo.launch()
