@@ -16,7 +16,6 @@ def ollama_chat(message, history,model_name,history_flag):
                 'role': 'user', 
                 'content': elment[0]
             }
-            print(history_message) 
             messages.append(history_message)   
     messages.append(message)
     stream = ollama.chat(
